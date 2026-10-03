@@ -1,12 +1,12 @@
 {
-  "name": "claude-code-expand-paste",
+  "name": "expand-paste",
   "owner": {
     "name": "tapioca24"
   },
   "description": "Keep pasted and batched prompt input expanded and editable.",
   "plugins": [
     {
-      "name": "claude-code-expand-paste",
+      "name": "expand-paste",
       "source": "."
     }
   ]

@@ -9,10 +9,10 @@ so long input can remain visible and editable instead of becoming
 Requires Claude Code with Mods/function hooks support enabled. TypeScript modules
 load directly; no dependencies or build step are needed.
 
-In Claude Code v2.1.275 or later, run:
+Requires Claude Code v2.1.287 or later.
 
 ```text
-/plugin install claude-code-expand-paste --marketplace tapioca24/claude-code-expand-paste
+/plugin install expand-paste --marketplace tapioca24/claude-code-expand-paste
 ```
 
 Choose **Install for you** to use the mod across projects. Claude Code fetches the
@@ -55,3 +55,9 @@ Implementation follows the [official Mods reference](https://code.claude.com/doc
 and [published types](https://github.com/anthropics/claude-code/blob/main/mods/types/claude-code.d.ts).
 Live collapse prevention and IME/Typeless behavior have not been verified;
 manual testing is still required on your Claude Code version.
+
+## Known limitations
+
+- This mod intercepts pasted and batched prompt input before Claude Code's default prompt editing behavior. Other mods that also handle the same `prompt.edit` event may not receive those edits.
+- Claude Code does not currently expose an explicit "paste" flag. The mod treats input without a key event as pasted or batched input, which may also include IME, dictation, and other programmatic text input.
+- This mod depends on the experimental Claude Code Mods API. Future Claude Code updates may change the `prompt.edit` behavior or API.
