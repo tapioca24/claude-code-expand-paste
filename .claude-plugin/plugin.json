@@ -1,6 +1,6 @@
 {
   "name": "expand-paste",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Expand collapsed clipboard text in the prompt for editing.",
   "author": {
     "name": "tapioca24"
