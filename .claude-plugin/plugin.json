@@ -1,0 +1,5 @@
+{
+  "name": "claude-code-expand-paste",
+  "version": "0.1.0",
+  "description": "Keep pasted and batched prompt input expanded and editable."
+}
