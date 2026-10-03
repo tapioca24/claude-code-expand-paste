@@ -3,7 +3,7 @@
   "owner": {
     "name": "tapioca24"
   },
-  "description": "Keep pasted and batched prompt input expanded and editable.",
+  "description": "Expand collapsed clipboard text in the prompt for editing.",
   "plugins": [
     {
       "name": "expand-paste",

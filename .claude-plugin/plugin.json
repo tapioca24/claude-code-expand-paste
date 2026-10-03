@@ -1,11 +1,11 @@
 {
   "name": "expand-paste",
   "version": "0.1.0",
-  "description": "Keep pasted and batched prompt input expanded and editable.",
+  "description": "Expand collapsed clipboard text in the prompt for editing.",
   "author": {
     "name": "tapioca24"
   },
   "repository": "https://github.com/tapioca24/claude-code-expand-paste",
   "license": "MIT",
-  "kaywords": ["paste", "prompt", "dictation"]
+  "keywords": ["paste", "prompt", "dictation"]
 }
