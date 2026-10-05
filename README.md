@@ -8,7 +8,18 @@ so long input remains visible and editable instead of becoming
   <img src="assets/expand-paste.gif" alt="Demo of expanding collapsed clipboard text in Claude Code">
 </p>
 
-## Install
+## Why use this?
+
+Claude Code collapses long pasted text into a placeholder, hiding the content
+you want to review before sending. This is especially frustrating when using
+a dictation tool that pastes transcribed text from the clipboard: you cannot
+immediately check whether your speech was transcribed correctly.
+
+This mod expands the pasted text directly in the prompt, so you can read the
+transcription, catch misheard words, and make corrections before sending it.
+It also keeps other long pasted input visible and editable.
+
+## Installation
 
 Requires Claude Code with Mods/function hooks support enabled. TypeScript modules
 load directly; no build step is needed.
@@ -53,6 +64,13 @@ Paste into the prompt as usual. Clipboard-based input from a dictation tool can
 also work; expansion with Typeless has been confirmed on macOS. No mod commands
 or configuration are required.
 
+Review the expanded text, make any corrections directly in the prompt, and
+send it when you are ready.
+
+If you encounter a problem, please [open an issue](https://github.com/tapioca24/claude-code-expand-paste/issues/new).
+
+## How it works
+
 Claude Code first handles the paste normally. Every 250 ms, the mod checks the
 prompt for a collapsed `[Pasted text #…]` placeholder. When one appears, it reads
 the clipboard using the command for the current environment. If the clipboard's
@@ -65,8 +83,6 @@ The mod leaves individual edits and Claude Code's default paste processing alone
 It does not expand placeholders after the one-second window. If the clipboard
 command cannot be used, it shows a message once per session and leaves the
 placeholder unchanged.
-
-If you encounter a problem, please [open an issue](https://github.com/tapioca24/claude-code-expand-paste/issues/new).
 
 ## Known limitations
 
