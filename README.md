@@ -4,6 +4,10 @@ A Claude Code mod that expands collapsed clipboard text in the prompt,
 so long input remains visible and editable instead of becoming
 `[Pasted text #1 +42 lines]`.
 
+<p align="center">
+  <img src="assets/expand-paste.gif" alt="Demo of expanding collapsed clipboard text in Claude Code">
+</p>
+
 ## Install
 
 Requires Claude Code with Mods/function hooks support enabled. TypeScript modules
