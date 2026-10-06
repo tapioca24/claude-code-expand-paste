@@ -21,42 +21,23 @@ It also keeps other long pasted input visible and editable.
 
 ## Installation
 
-Requires Claude Code with Mods/function hooks support enabled. TypeScript modules
-load directly; no build step is needed.
-
 Requires Claude Code v2.1.287 or later.
 
-Clipboard access depends on your environment:
-
-| Environment | Command used |
-| --- | --- |
-| macOS | `pbpaste` (included with macOS) |
-| Windows | `powershell.exe` with `Get-Clipboard -Raw` |
-| WSL | Windows `powershell.exe` first; Linux commands as fallback |
-| Linux with Wayland | `wl-paste --no-newline` from `wl-clipboard` (preferred) |
-| Linux with X11 | `xclip` or `xsel` |
-
-On Linux, install at least one of `wl-clipboard`, `xclip`, or `xsel` for your
-desktop session. WSL needs Windows command interop enabled to use `powershell.exe`;
-if interop is unavailable, a Linux clipboard command can be used instead.
+Run the following command in Claude Code:
 
 ```text
 /plugin install expand-paste --marketplace tapioca24/claude-code-expand-paste
 ```
 
-Choose **Install for you** to use the mod across projects. Claude Code fetches the
-repository automatically; no manual clone or startup flags are needed. Follow
-any reload instructions shown after installation.
+### Additional setup
 
-### Local development
+On Linux, install the clipboard tool for your desktop session:
 
-```sh
-git clone https://github.com/tapioca24/claude-code-expand-paste.git
-claude --plugin-dir /absolute/path/to/claude-code-expand-paste
-```
+- **Wayland:** `wl-clipboard` (provides `wl-paste`).
+- **X11:** `xclip` or `xsel`.
 
-Replace the path with your clone's location. This loads the local copy for that
-session only.
+On WSL, if Windows command interoperability is unavailable, install a Linux
+clipboard tool as described above.
 
 ## Usage
 
@@ -73,8 +54,6 @@ Expansion is enabled by default. To change it, use the slash command:
 
 The setting persists across sessions and is also available in `/config`
 (**Expand pasted text**).
-
-If you encounter a problem, please [open an issue](https://github.com/tapioca24/claude-code-expand-paste/issues/new).
 
 ## How it works
 
