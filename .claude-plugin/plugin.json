@@ -1,11 +1,19 @@
 {
   "name": "expand-paste",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Expand collapsed clipboard text in the prompt for editing.",
   "author": {
     "name": "tapioca24"
   },
   "repository": "https://github.com/tapioca24/claude-code-expand-paste",
   "license": "MIT",
-  "keywords": ["paste", "prompt", "dictation"]
+  "keywords": ["paste", "prompt", "dictation"],
+  "userConfig": {
+    "enabled": {
+      "type": "boolean",
+      "title": "Expand pasted text",
+      "description": "Expand collapsed [Pasted text #…] placeholders with the clipboard text.",
+      "default": true
+    }
+  }
 }

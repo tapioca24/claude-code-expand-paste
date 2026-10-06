@@ -61,11 +61,18 @@ session only.
 ## Usage
 
 Paste into the prompt as usual. Clipboard-based input from a dictation tool can
-also work; expansion with Typeless has been confirmed on macOS. No mod commands
-or configuration are required.
+also work.
 
-Review the expanded text, make any corrections directly in the prompt, and
-send it when you are ready.
+Expansion is enabled by default. To change it, use the slash command:
+
+| Command | Effect |
+| --- | --- |
+| `/expand-paste` | Toggle expansion and show the new state |
+| `/expand-paste on` | Enable expansion |
+| `/expand-paste off` | Disable expansion |
+
+The setting persists across sessions and is also available in `/config`
+(**Expand pasted text**).
 
 If you encounter a problem, please [open an issue](https://github.com/tapioca24/claude-code-expand-paste/issues/new).
 
