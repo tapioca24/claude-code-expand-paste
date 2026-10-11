@@ -1,5 +1,9 @@
 # claude-code-expand-paste
 
+<a aria-label="license" href="https://github.com/tapioca24/claude-code-expand-paste/blob/main/LICENSE">
+  <img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge&labelColor=223843" alt="MIT license">
+</a>
+
 A Claude Code mod that expands collapsed clipboard text in the prompt,
 so long input remains visible and editable instead of becoming
 `[Pasted text #1 +42 lines]`.
